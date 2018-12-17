@@ -11,5 +11,13 @@
   "dependencies": {
     "express": "^4.16.4",
     "underscore": "^1.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brrrrrm/node.js_practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brrrrrm/node.js_practice/issues"
+  },
+  "homepage": "https://github.com/brrrrrm/node.js_practice#readme"
 }
