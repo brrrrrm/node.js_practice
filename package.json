@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_practice",
+  "version": "1.0.0",
+  "description": "server side javascript practice",
+  "main": "module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brm",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "underscore": "^1.9.1"
+  }
+}
