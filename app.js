@@ -1,6 +1,30 @@
 var express = require('express');
 var app = express();
+app.set('view engine', 'pug');
+app.set('views', './views');
+app.set('view options', {pretty: true})
 app.use(express.static('public'));
+app.get('/topic/:id', function(req,res){
+  var topics = [
+    'Javascript is ...',
+    'NodeJs is ... ',
+    'Express is ...',
+    {'color' : 'red'}
+  ];
+  var output = `
+  <a href = "/topic?id=0">JavaScript</a><br>
+  <a href = "/topic?id=1">NodeJS</a><br>
+  <a href = "/topic?id=2">Express</a><br>
+  <h1>${topics[req.params.id]}</h1>
+  `
+  res.send(output);
+})
+app.get('topic/:id/:mode', function(req, res){
+  res.send(req.params.id + ',' + req.params.mode);
+})
+app.get('/template', function(req, res){
+  res.render('temp', { time : Date(), _title : 'Pug'});
+});
 app.get('/', function(req, res){
     res.send('Hello home page');;
 });
